@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import FormWatch from './components/FormWatch';
+import 'bootstrap/dist/css/bootstrap.css'
 
 function App() {
+  const initialState = [
+    {
+        id: 1,
+        name: 'Moscow',
+        offsetUTC: 3,
+    },
+    {
+        id: 2,
+        name: 'Kaliningrad',
+        offsetUTC: 2,
+    }
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FormWatch initialState={initialState}/>
   );
 }
 

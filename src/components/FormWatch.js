@@ -22,10 +22,10 @@ export default function FormWatch({initialState}) {
     }
 
     return (
-        <form className='form' style={{width: '50vw', position: 'absolute', left: '50%', translate: '-50%'}}>
+        <div className='container mb-3' style={{width: '50vw', position: 'absolute', left: '50%', translate: '-50%'}}>
             <AddWatch onAddWatch={handleAddWatch} />
             <ListWatches list={list} onRemove={handleDelete} />
-        </form>
+        </div>
     )
 }
 
